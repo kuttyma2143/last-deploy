@@ -1,13 +1,16 @@
 {
+  "homepage": "https://kuttyma2143.github.io/last-deploy",
   "name": "lasttry",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "react-scripts build && cp build/index.html build/404.html",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "react": "^18.3.1",
